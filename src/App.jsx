@@ -1,21 +1,18 @@
-import EmployeePage from './components/EmployeePage';
-import HomePage from './components/HomePage';
-import SearchBar from './components/SearchBar';
-import Header from './Header';
-import EmployeeList from './components/EmployeeList';
-import EmployeeListItem from './components/EmployeeListItem';
-
 import './App.css'
+
+// Components
+import HomePage from './components/HomePage'
+import EmployeePage from './components/EmployeePage'
 
 function App() {
   
 
   return (
-    <>
-    <main><h1>Employee Page</h1></main>
-    <main><h1>Home Page</h1></main>
-    </>
-  );
+   <main>
+    <HomePage />
+    <EmployeePage />
+   </main>
+  )
 }
 
 export default App;

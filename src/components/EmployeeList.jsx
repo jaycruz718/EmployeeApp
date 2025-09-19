@@ -1,27 +1,24 @@
 import EmployeeListItem from "./EmployeeListItem";
-import EmployeeListData from "../utilites/employeeData.mjs";
+import employeeListData from "../utilities/employeeData.mjs";
 
 export default function EmployeeList() {
 
-    let style = {
-        listDecoration: 'none',
-        margin: "0",
-        padding: "0"
-    };
+     let style = {
+    listStyle: 'none',
+    margin: "0",
+    padding: "0",
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '5px'
+  }
     
-    let loadedData = EmployeeListData.map((em)=> {
-        return <EmployeeListItem {...em} />
-    })
+      let loadedList = employeeListData.map((em)=>{
+    return <EmployeeListItem {...em} />
+  })
 
-    return(
-         <ul>
-            <li>Employee List</li>
-            <li>Employee List</li>
-            <li>Employee List</li>
-            <li>Employee List</li>
-            <li>Employee List</li>
-            <li>Employee List</li>
-        </ul>
- 
-    );
+    return (
+    <ul style={style}>
+     {loadedList}
+    </ul>
+  );
 }
